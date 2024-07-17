@@ -19,6 +19,10 @@ struct SharedPreferencesInstance
 end
 
 function load(instance::SharedPreferencesInstance)
+    if !isfile(instance.path)
+        return Dict{String, Any}()
+    end
+
     file = open(instance.path, "r")
     encrypted = read(file, String)
     close(file)
