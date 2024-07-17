@@ -27,6 +27,20 @@ function test_all()
     @test get(instance, "boolean") == true
     @test get(instance, "array") == [1, 2, 3]
 
+    instance = SharedPreferencesInstance(key)
+    remove!(instance, "string")
+    remove!(instance, "integer")
+    remove!(instance, "float")
+    remove!(instance, "boolean")
+    remove!(instance, "array")
+
+    instance = SharedPreferencesInstance(key)
+    @test_throws KeyError get(instance, "string")
+    @test_throws KeyError get(instance, "integer")
+    @test_throws KeyError get(instance, "float")
+    @test_throws KeyError get(instance, "boolean")
+    @test_throws KeyError get(instance, "array")
+
     return nothing
 end
 

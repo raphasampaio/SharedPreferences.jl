@@ -54,5 +54,6 @@ string = get(instance, "string")
 integer = get(instance, "integer")
 float = get(instance, "float")
 boolean = get(instance, "boolean")
+array = get(instance, "array")
 
 ```
