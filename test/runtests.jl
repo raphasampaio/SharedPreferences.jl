@@ -19,7 +19,7 @@ function test_all()
     set!(instance, "float", 3.14)
     set!(instance, "boolean", true)
     set!(instance, "array", [1, 2, 3])
-    
+
     instance = SharedPreferencesInstance(key)
     @test get(instance, "string") == "value"
     @test get(instance, "integer") == 42
