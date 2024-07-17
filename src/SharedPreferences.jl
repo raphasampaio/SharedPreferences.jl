@@ -3,7 +3,7 @@ module SharedPreferences
 using Nettle
 using TOML
 
-export SharedPreferencesInstance, set!, get, remove!
+export set!, get, remove!, clean!
 
 include("instance.jl")
 

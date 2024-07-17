@@ -42,14 +42,14 @@ using SharedPreferences
 
 key = "JjL9kX9BRNsHa6ykI8s8eV9ZX2Wb1Fsf"
 
-instance = SharedPreferencesInstance(key)
+instance = SharedPreferences.Instance(key)
 set!(instance, "string", "value")
 set!(instance, "integer", 42)
 set!(instance, "float", 3.14)
 set!(instance, "boolean", true)
 set!(instance, "array", [1, 2, 3])
 
-instance = SharedPreferencesInstance(key)
+instance = SharedPreferences.Instance(key)
 string = get(instance, "string")
 integer = get(instance, "integer")
 float = get(instance, "float")

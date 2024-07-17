@@ -1,9 +1,9 @@
-struct SharedPreferencesInstance
+struct Instance
     encryptor::Nettle.Encryptor
     decryptor::Nettle.Decryptor
     path::String
 
-    function SharedPreferencesInstance(key::AbstractString)
+    function Instance(key::AbstractString)
         @assert length(key) == 32
 
         directory = tempdir()
@@ -18,7 +18,7 @@ struct SharedPreferencesInstance
     end
 end
 
-function load(instance::SharedPreferencesInstance)
+function load(instance::Instance)
     if !isfile(instance.path)
         return Dict{String, Any}()
     end
@@ -32,7 +32,7 @@ function load(instance::SharedPreferencesInstance)
     return TOML.parse(String(decrypted))
 end
 
-function save(instance::SharedPreferencesInstance, content::Dict)
+function save(instance::Instance, content::Dict)
     serialized = sprint(io -> TOML.print(io, content))
     encrypted = encrypt(instance.encryptor, add_padding_PKCS5(Vector{UInt8}(serialized), 16))
 
@@ -43,21 +43,26 @@ function save(instance::SharedPreferencesInstance, content::Dict)
     return nothing
 end
 
-function set!(instance::SharedPreferencesInstance, key::AbstractString, value::Any)
+function set!(instance::Instance, key::AbstractString, value::Any)
     toml = load(instance)
     toml[key] = value
     save(instance, toml)
     return nothing
 end
 
-function Base.get(instance::SharedPreferencesInstance, key::AbstractString)
+function Base.get(instance::Instance, key::AbstractString)
     toml = load(instance)
     return toml[key]
 end
 
-function remove!(instance::SharedPreferencesInstance, key::AbstractString)
+function remove!(instance::Instance, key::AbstractString)
     toml = load(instance)
     delete!(toml, key)
     save(instance, toml)
+    return nothing
+end
+
+function clean!(instance::Instance)
+    rm(instance.path, force = true)
     return nothing
 end
