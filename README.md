@@ -7,8 +7,8 @@
     <a href="https://raphasampaio.github.io/SharedPreferences.jl/dev">
         <img src="https://img.shields.io/badge/docs-dev-blue.svg" alt="Dev">
     </a>
-    <a href="https://pkgs.genieframework.com?packages=SharedPreferences">
-        <img src="https://shields.io/endpoint?url=https://pkgs.genieframework.com/api/v1/badge/SharedPreferences/label:-sep:">
+    <a href="https://github.com/JuliaTesting/Aqua.jl">
+        <img src="https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg" alt="Coverage"/>
     </a>
     <br>
     <a href="https://juliahub.com/ui/Packages/SharedPreferences/sHGR0">
@@ -19,9 +19,6 @@
     </a>
     <a href="https://codecov.io/gh/raphasampaio/SharedPreferences.jl">
         <img src="https://codecov.io/gh/raphasampaio/SharedPreferences.jl/branch/main/graph/badge.svg" alt="Coverage"/>
-    </a>
-    <a href="https://github.com/JuliaTesting/Aqua.jl">
-        <img src="https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg" alt="Coverage"/>
     </a>
 </div>
 
