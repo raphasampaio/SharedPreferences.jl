@@ -44,21 +44,26 @@ function save(instance::Instance, content::Dict)
 end
 
 function set!(instance::Instance, key::AbstractString, value::Any)
-    toml = load(instance)
-    toml[key] = value
-    save(instance, toml)
+    dict = load(instance)
+    dict[key] = value
+    save(instance, dict)
     return nothing
 end
 
 function Base.get(instance::Instance, key::AbstractString)
-    toml = load(instance)
-    return toml[key]
+    dict = load(instance)
+    return dict[key]
+end
+
+function Base.get(instance::Instance, key::AbstractString, default::Any)
+    dict = load(instance)
+    return get(dict, key, default)
 end
 
 function remove!(instance::Instance, key::AbstractString)
-    toml = load(instance)
-    delete!(toml, key)
-    save(instance, toml)
+    dict = load(instance)
+    delete!(dict, key)
+    save(instance, dict)
     return nothing
 end
 
