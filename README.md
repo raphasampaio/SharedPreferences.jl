@@ -11,8 +11,8 @@
         <img src="https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg" alt="Coverage"/>
     </a>
     <br>
-    <a href="https://juliahub.com/ui/Packages/SharedPreferences/sHGR0">
-        <img src="https://juliahub.com/docs/SharedPreferences/version.svg" alt="Version"/>
+    <a href="https://juliahub.com/ui/Packages/General/SharedPreferences">
+        <img src="https://juliahub.com/docs/General/SharedPreferences/stable/version.svg" alt="Version"/>
     </a>
     <a href="https://github.com/raphasampaio/SharedPreferences.jl/actions/workflows/CI.yml">
         <img src="https://github.com/raphasampaio/SharedPreferences.jl/actions/workflows/CI.yml/badge.svg" alt="CI"/>
