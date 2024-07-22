@@ -45,13 +45,19 @@ function test_shared_preferences(instance::SharedPreferences.AbstractInstance)
 end
 
 function test_all()
-    @testset "Aqua.jl" begin test_aqua() end
+    @testset "Aqua.jl" begin
+        test_aqua()
+    end
 
     instance = SharedPreferences.Instance("vG1Z4i52FR")
-    @testset "instance" begin test_shared_preferences(instance) end
+    @testset "instance" begin
+        test_shared_preferences(instance)
+    end
 
     instance = SharedPreferences.InstanceEncrypted("gIU2iw4p10KnP2HsU5TBJ5Uuj5Khj2R0")
-    @testset "instance encrypted" begin test_shared_preferences(instance) end    
+    @testset "instance encrypted" begin
+        test_shared_preferences(instance)
+    end
 
     return nothing
 end

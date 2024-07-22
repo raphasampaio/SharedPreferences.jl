@@ -58,6 +58,7 @@ end
 function save(instance::Instance, content::Dict)
     open(instance.path, "w") do io
         TOML.print(io, content)
+        return nothing
     end
 
     return nothing
