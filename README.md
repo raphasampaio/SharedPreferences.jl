@@ -2,7 +2,7 @@
 
 [![Documentation](https://img.shields.io/badge/docs-stable-blue.svg)](https://raphasampaio.github.io/SharedPreferences.jl/stable)
 [![CI](https://github.com/raphasampaio/SharedPreferences.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/raphasampaio/SharedPreferences.jl/actions/workflows/CI.yml)
-[![Codecov](https://codecov.io/gh/raphasampaio/SharedPreferences.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/raphasampaio/SharedPreferences.jl)
+[![codecov](https://codecov.io/gh/raphasampaio/SharedPreferences.jl/graph/badge.svg?token=FPKzhDwSAB)](https://codecov.io/gh/raphasampaio/SharedPreferences.jl)
 [![Aqua](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
 
 ## Introduction
