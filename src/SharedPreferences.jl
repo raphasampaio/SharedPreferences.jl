@@ -8,12 +8,8 @@ export set!, get, remove!, clean!
 
 include("instance.jl")
 
-@setup_workload begin
-    @compile_workload begin
-        key = "Q0K38aFg7aSbVvDAgnDhgBF1CWyTfLlH"
-    end
-
-    instance = SharedPreferences.InstanceEncrypted(key)
+@compile_workload begin
+    instance = SharedPreferences.InstanceEncrypted("Q0K38aFg7aSbVvDAgnDhgBF1CWyTfLlH")
 
     set!(instance, "string", "value")
     set!(instance, "integer", 42)
