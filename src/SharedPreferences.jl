@@ -9,7 +9,7 @@ export set!, get, remove!, clean!
 include("instance.jl")
 
 @compile_workload begin
-    instance = SharedPreferences.InstanceEncrypted("OMcXi7eR")
+    instance = SharedPreferences.Instance("OMcXi7eR")
     clean!(instance)
 
     instance = SharedPreferences.InstanceEncrypted("Q0K38aFg7aSbVvDAgnDhgBF1CWyTfLlH")
