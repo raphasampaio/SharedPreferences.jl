@@ -22,6 +22,9 @@ include("instance.jl")
     stored_float = get(instance, "float")
     stored_boolean = get(instance, "boolean")
     stored_array = get(instance, "array")
+
+    remove!(instance, "string")
+    clean!(instance)
 end
 
 end
