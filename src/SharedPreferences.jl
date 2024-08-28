@@ -1,7 +1,7 @@
 module SharedPreferences
 
 using Nettle
-using PrecompileTools: @setup_workload, @compile_workload
+using PrecompileTools: @compile_workload
 using TOML
 
 export set!, get, remove!, clean!
