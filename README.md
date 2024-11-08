@@ -8,7 +8,7 @@
 
 SharedPreferences.jl is a Julia package that provides persistent storage for simple data types. Inspired by the widely-used Dart package, this library supports asynchronous disk persistence, offering a flexible and user-friendly solution for storing non-critical data securely.
 
-## Features:
+## Features
 
 - Easy and consistent API for storing and retrieving data.
 - Asynchronous disk storage with encryption options for enhanced data security.
