@@ -38,7 +38,7 @@ function test_shared_preferences(instance::SharedPreferences.AbstractInstance)
     @test_throws KeyError get(instance, "float")
     @test_throws KeyError get(instance, "boolean")
     @test_throws KeyError get(instance, "array")
-    
+
     @test get(instance, "string", "value") == "value"
     @test get(instance, "integer", 42) == 42
     @test get(instance, "float", 3.14) == 3.14
