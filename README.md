@@ -19,7 +19,7 @@ SharedPreferences.jl is a Julia package that provides persistent storage for sim
 ### Installation
 
 ```julia
-julia> ] add SharedPreferences
+pkg> add SharedPreferences
 ```
 
 ### Example
