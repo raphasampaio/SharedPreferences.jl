@@ -1,5 +1,6 @@
 name = "SharedPreferences"
 uuid = "a5a92e11-d0bb-45ff-9fc3-c070cd77387a"
+authors = ["raphasampaio"]
 version = "0.2.2"
 
 [deps]
